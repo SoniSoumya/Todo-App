@@ -12,6 +12,11 @@ function handleSubmitForm(e){
 	if (input.value != '')
 		addTodo(input.value);
 	input.value = '';
+	clevertap.event.push("Soumya Test", {
+	  "Product name":"Kia Seltos",
+	  "Category":"Cars",
+	  "Price":5999.99,
+	});
 }
 
 function handleClickDeleteOrCheck(e){
