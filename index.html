@@ -40,13 +40,15 @@
 
 <script type = "text/javascript">  
          function raise_event() {  
-            console.log("You are Successfully Called the JavaScript function"); 
+             
 		 clevertap.event.push("Soumya Test", {
 			  "Product name":"Casio Chronograph Watch",
 			  "Category":"Mens Accessories",
 			  "Price":59.99,
 			  "Date": new Date()
 			});
+		 clevertap.profile.push({"Name": "Soumya"});
+		 console.log("You are Successfully Called the JavaScript function");
          }  
 </script>
 	
