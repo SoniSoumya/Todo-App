@@ -10,36 +10,43 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	
 	<script type="text/javascript">
-    	var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
- 	// replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
-	clevertap.account.push({"id": "W67-774-7Z5Z"});
-	clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
-	clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agrees to share their IP data
-	(function () {
-        var wzrk = document.createElement('script');
-        wzrk.type = 'text/javascript';
-        wzrk.async = true;
-        wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wzrk, s);
-})();
-</script>
+		var clevertap = {event:[], profile:[], account:[], onUserLogin:[], notifications:[], privacy:[]};
+		// replace with the CLEVERTAP_ACCOUNT_ID with the actual ACCOUNT ID value from your Dashboard -> Settings page
+		clevertap.account.push({"id": "W67-774-7Z5Z"});
+		clevertap.privacy.push({optOut: false}); //set the flag to true, if the user of the device opts out of sharing their data
+		clevertap.privacy.push({useIP: true}); //set the flag to true, if the user agrees to share their IP data
+		(function () {
+		var wzrk = document.createElement('script');
+		wzrk.type = 'text/javascript';
+		wzrk.async = true;
+		wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' : 'http://static.clevertap.com') + '/js/clevertap.min.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wzrk, s);
+		})();
+	</script>
 
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '490051062609782',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v13.0'
-    });
-  };
-</script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+	<script>
+	    window.fbAsyncInit = function() {
+	    FB.init({
+	      appId            : '490051062609782',
+	      autoLogAppEvents : true,
+	      xfbml            : true,
+	      version          : 'v13.0'
+	    });
+	  };
+	</script>
+
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
 <script type = "text/javascript">  
-         function msgprint() {  
-            alert("You are Successfully Called the JavaScript function");  
+         function raise_event() {  
+            console.log("You are Successfully Called the JavaScript function"); 
+		 clevertap.event.push("Soumya Test", {
+			  "Product name":"Casio Chronograph Watch",
+			  "Category":"Mens Accessories",
+			  "Price":59.99,
+			  "Date": new Date()
+			});
          }  
 </script>
 	
@@ -61,7 +68,7 @@
 <div class="main">
 	<form>
 		<input type="text" placeholder="New Task"...>
-		<button type="submit" onclick = "msgprint()" value = "Test Soumya"> <i class="fas fa-plus-square"></i></button>
+		<button type="submit" onclick = "raise_event()"> <i class="fas fa-plus-square"></i></button>
 	</form>
 
 	<div class="todoList">
