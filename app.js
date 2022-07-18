@@ -13,10 +13,12 @@ function handleSubmitForm(e){
 		addTodo(input.value);
 	input.value = '';
 	clevertap.event.push("Soumya Test", {
-	  "Product name":"Kia Seltos",
-	  "Category":"Cars",
-	  "Price":5999.99,
-	});
+		  "Product name":"Casio Watch",
+		  "Category":"Mens Accessories",
+		  "Price":59.99,
+		  "Date": new Date()
+		});
+	clevertap.profile.push({"Task1": input.value});
 }
 
 function handleClickDeleteOrCheck(e){
