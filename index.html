@@ -25,32 +25,8 @@
 		})();
 	</script>
 
-	<script>
-	    window.fbAsyncInit = function() {
-	    FB.init({
-	      appId            : '490051062609782',
-	      autoLogAppEvents : true,
-	      xfbml            : true,
-	      version          : 'v13.0'
-	    });
-	  };
-	</script>
 
-	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
-<script type = "text/javascript">  
-         function raise_event() {  
-             
-		 clevertap.event.push("Soumya Test", {
-			  "Product name":"Casio Chronograph Watch",
-			  "Category":"Mens Accessories",
-			  "Price":59.99,
-			  "Date": new Date()
-			});
-		 clevertap.profile.push({"Name": "Soumya"});
-		 console.log("You are Successfully Called the JavaScript function");
-         }  
-</script>
 	
 </head>
 
@@ -70,7 +46,12 @@
 <div class="main">
 	<form>
 		<input type="text" placeholder="New Task"...>
-		<button type="submit" onclick = "raise_event()"> <i class="fas fa-plus-square"></i></button>
+		<button type="submit" onclick = "clevertap.event.push("Soumya Test", {
+			  "Product name":"Casio Chronograph Watch",
+			  "Category":"Mens Accessories",
+			  "Price":59.99,
+			  "Date": new Date()
+			});"> <i class="fas fa-plus-square"></i></button>
 	</form>
 
 	<div class="todoList">
