@@ -69,12 +69,7 @@
 <div class="main">
 	<form>
 		<input type="text" placeholder="New Task"...>
-		<button type="submit" onclick = "clevertap.event.push("Soumya Test", {
-			  "Product name":"Casio Chronograph Watch",
-			  "Category":"Mens Accessories",
-			  "Price":59.99,
-			  "Date": new Date()
-			});"> <i class="fas fa-plus-square"></i></button>
+		<button type="submit"> <i class="fas fa-plus-square"></i></button>
 	</form>
 
 	<div class="todoList">
@@ -90,5 +85,22 @@
 
 	<script type="text/javascript" src="app.js"></script>
 	
+<button id="demo" onclick="myFunction()">Click me</button>
+
+<p>A function is triggered when the button element is clicked. The function raises an event called Button Clicked with event properties as Button id and Label.</p>
+
+<script>
+function myFunction() {
+  console.log("Raising Notification Clicked Event");
+	clevertap.event.push("Button Clicked", {
+		  "Product name":"Casio Chronograph Watch",
+		  "Category":"Mens Accessories",
+		  "Price":59.99
+});
+	document.getElementById("demo").style.color = "red";
+}
+</script>
+	
+
 </body>
 </html>
