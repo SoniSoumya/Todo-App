@@ -70,6 +70,18 @@ body, html {
   background-color: #555;
   color: white;
 }
+
+.message {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+	
+.center-left {
+  position: absolute;
+  bottom: 50px;
+  left: 16px;
+}
 </style>
 
 <script type="text/javascript">
@@ -90,15 +102,16 @@ document.addEventListener("CT_web_personalization", function(event) {
 <body>
 
 <div id="container">
-    <div class="close">&times;</div>
+
  <div class="message">
-<img src="https://img.freepik.com/free-photo/young-gowoman-yellow-leather-jacket-copy-space_23-2148674153.jpg?w=1500"/>
+<div class="center-left">
+<img src="https://img.freepik.com/free-photo/young-gowoman-yellow-leather-jacket-copy-space_23-2148674153.jpg?" style="width:100%;">
     Hello <span id="user-name">user</span>,
     <p>Still thinking about the <span id="product-name">item</span> in your cart?</p>
     <p>We get it - it's fabulous.</p>
     <p>Use SALE20 and avail 20% off</p>
     <p>What are you waiting for??</p>
-  </div>
+ </div>
 </div>
 	
 <script type="text/javascript">
