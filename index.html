@@ -71,11 +71,49 @@ body, html {
   color: white;
 }
 </style>
-	
+
+document.addEventListener("CT_web_personalization", function(event) {
+  const data = event.detail;
+    const topic = data.kv.topic;
+    switch (topic) {
+        case "Cart drop-off": {
+            renderCartDropOffPersonalisationCampaign(data)
+            break;
+    }
+  }
+});	
+
 </head>
 
 <body>
 
+<div id="container">
+    <div class="close">&times;</div>
+  <img src="https://img.freepik.com/free-photo/young-gowoman-yellow-leather-jacket-copy-space_23-2148674153.jpg?w=2000"/>
+  <div class="message">
+    Hello <span id="user-name">user</span>,
+    <p>Still thinking about the <span id="product-name">item</span> in your cart?</p>
+    <p>We get it - it's fabulous.</p>
+    <p>Use SALE20 and avail 20% off</p>
+    <p>What are you waiting for??</p>
+  </div>
+</div>
+	
+<script type="text/javascript">
+	function renderCartDropOffPersonalisationCampaign(data) {
+    const name = data.kv.Name;
+  const product = data.kv.Cart;
+  const containerEl = document.getElementById('container')
+  const userNameEl = containerEl.getElementById('user-name')
+  usernameEl.innerText = name
+  const productNameEl = containerEl.getElementById('product-name')
+  productNameEl.innerText = product 
+}
+</script>
+	
+	
+	
+	
 <div class="hero-image">
   <div class="hero-text">
     <h1 style="font-size:50px">I am John Doe</h1>
