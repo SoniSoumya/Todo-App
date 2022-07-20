@@ -71,11 +71,7 @@ body, html {
   color: white;
 }
 
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+
 	
 .center-left {
   position: absolute;
@@ -102,17 +98,6 @@ document.addEventListener("CT_web_personalization", function(event) {
 <body>
 
 <div id="container">
-
- <div class="container">
-<div class="center-left">
-<img src="https://img.freepik.com/free-photo/young-gowoman-yellow-leather-jacket-copy-space_23-2148674153.jpg?w=1440">
-    Hello <span id="user-name">user</span>,
-    <p>Still thinking about the <span id="product-name">item</span> in your cart?</p>
-    <p>We get it - it's fabulous.</p>
-    <p>Use SALE20 and avail 20% off</p>
-    <p>What are you waiting for??</p>
- </div>
-</div>
 	
 <script type="text/javascript">
 	function renderCartDropOffPersonalisationCampaign(data) {
@@ -161,7 +146,18 @@ document.addEventListener("CT_web_personalization", function(event) {
   const analytics = getAnalytics(app);
 </script>
 <div class="container">	
-<header class="logo">
+
+<div class="center-left">
+<img src="https://img.freepik.com/free-photo/young-gowoman-yellow-leather-jacket-copy-space_23-2148674153.jpg?w=1440">
+    Hello <span id="user-name">user</span>,
+    <p>Still thinking about the <span id="product-name">item</span> in your cart?</p>
+    <p>We get it - it's fabulous.</p>
+    <p>Use SALE20 and avail 20% off</p>
+    <p>What are you waiting for??</p>
+ </div>
+	
+	
+	<header class="logo">
 		<a href="https://www.google.com">
 			<img class="logo" src="https://cdn4.iconfinder.com/data/icons/ikooni-outline-seo-web/128/seo-12-512.png">
 		</a>
