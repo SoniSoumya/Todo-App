@@ -35,18 +35,29 @@ border: 1px solid #4CAF50;
 }
 
 .div-3 {
-  max-height: 300px;
-	max-width: 45%;
-	align:left;
-border: 1px solid #4CAF50;
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
 }
+	
 	
 .div-4 {
   max-height: 300px;
 	max-width: 45%;
-	align:right;
+	align:left;
+	display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
+}
 	
-border: 1px solid #4CAF50;
+.div-5 {
+  max-height: 300px;
+	max-width: 45%;
+	align:right;
+	display: inline-block;
+  border: 1px solid red;
+  padding: 1rem 1rem;
 }
 img {
 
@@ -66,9 +77,9 @@ img {
 			<button onclick="clevertap.event.push("QuoteOfTheDay")"> Quote of the Day </button>
 			
 		</div>
-		
-		<div id="left-banner" class="div-3"> </div>
-		<div id="right-banner" class="div-4"> </div>
-		
+		<div class="div-3">
+		<div id="left-banner" class="div-4"> </div>
+		<div id="right-banner" class="div-5"> </div>
+		</div>
 	</body>
 </html>
